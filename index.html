@@ -1,0 +1,116 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Scores & Percentages</title>
+    <style>
+        *{
+            text-align: center;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .loss{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-weight: bold;
+            text-decoration: none;
+            color: orange;
+            height: 200px;
+            width: 200px;
+        }
+        .morr:hover {
+            background-color: olive;
+            border-color:black;
+            
+            
+        }
+        button{
+            height: 40px;
+            width: 200px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="fill">
+        <button class="morr"><a class="loss" href="home.html">QUESTION 8</a></button>
+        <button class="morr"><a class="loss" href="contact us.html">QUESTION9</a></button>
+        <button class="morr"><a class="loss" href="index.html">QUESTION10</a></button>
+        <button class="morr"><a class="loss" href="vols.html">QUESTION11</a></button>
+        <button class="morr"><a class="loss" href="note.html">QUESTION12</a></button>
+        <button class="morr"><a class="loss" href="feedback.html">QUESTION13</a></button>
+     </div>
+    <h1>Student Scores & Percentages</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Score</th>
+                <th>Percentage</th>
+            </tr>
+        </thead>
+        <tbody id="student-table-body">
+            <!-- Data will be added here by JavaScript -->
+        </tbody>
+    </table>
+
+    <script>
+        // Arrays to store student names and scores
+        var studentNames = ["Student 1", "Student 2", "Student 3"];
+        var studentScores = [450, 400, 375];  // Example scores out of 500
+
+        // Total marks
+        var totalMarks = 500;
+
+        // Function to calculate percentage
+        function calculatePercentage(score) {
+            return (score / totalMarks) * 100;
+        }
+
+        // Get the table body element
+        var tableBody = document.getElementById('student-table-body');
+
+        // Loop through the students and add rows to the table
+        for (var i = 0; i < studentNames.length; i++) {
+            var score = studentScores[i];
+            var percentage = calculatePercentage(score);
+
+            // Create a new row
+            var row = document.createElement('tr');
+
+            // Create and add the name cell
+            var nameCell = document.createElement('td');
+            nameCell.textContent = studentNames[i];
+            row.appendChild(nameCell);
+
+            // Create and add the score cell
+            var scoreCell = document.createElement('td');
+            scoreCell.textContent = score;
+            row.appendChild(scoreCell);
+
+            // Create and add the percentage cell
+            var percentageCell = document.createElement('td');
+            percentageCell.textContent = percentage.toFixed(2) + '%';
+            row.appendChild(percentageCell);
+
+            // Append the row to the table body
+            tableBody.appendChild(row);
+        }
+    </script>
+</body>
+</html>

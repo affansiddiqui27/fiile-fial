@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy City Names</title>
+    <style>
+        *{
+            text-align: center;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #output {
+            margin-top: 20px;
+        }
+        .loss{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-weight: bold;
+            text-decoration: none;
+            color: orange;
+            height: 200px;
+            width: 200px;
+        }
+        .morr:hover {
+            background-color: olive;
+            border-color:black;
+            
+            
+        }
+        button{
+            height: 40px;
+            width: 200px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="fill">
+        <button class="morr"><a class="loss" href="home.html">QUESTION 8</a></button>
+        <button class="morr"><a class="loss" href="contact us.html">QUESTION9</a></button>
+        <button class="morr"><a class="loss" href="index.html">QUESTION10</a></button>
+        <button class="morr"><a class="loss" href="vols.html">QUESTION11</a></button>
+        <button class="morr"><a class="loss" href="note.html">QUESTION12</a></button>
+        <button class="morr"><a class="loss" href="feedback.html">QUESTION13</a></button>
+     </div>
+
+    <h1>Copy City Names</h1>
+
+    <div id="output">
+        <h2>Original City Names:</h2>
+        <p id="original-cities"></p>
+        <h2>Selected City Names:</h2>
+        <p id="selected-cities"></p>
+    </div>
+
+    <script>
+        // Initialize an array with city names
+        var cities = ["New York", "London", "Tokyo", "Paris", "Sydney"];
+
+        // Copy three elements from cities array to selectedCities array
+        var selectedCities = cities.slice(0, 3);
+
+        // Display the original city names
+        document.getElementById("original-cities").textContent = "Original Cities: " + cities.join(", ");
+
+        // Display the selected city names
+        document.getElementById("selected-cities").textContent = "Selected Cities: " + selectedCities.join(", ");
+    </script>
+</body>
+</html>

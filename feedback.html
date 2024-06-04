@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Array Manipulation</title>
+    <style>
+        *{
+            text-align: center;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .output {
+            margin-top: 20px;
+        }
+        .loss{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-weight: bold;
+            text-decoration: none;
+            color: orange;
+            height: 200px;
+            width: 200px;
+        }
+        .morr:hover {
+            background-color: olive;
+            border-color:black;
+            
+            
+        }
+        button{
+            height: 40px;
+            width: 200px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="fill">
+        <button class="morr"><a class="loss" href="home.html">QUESTION 8</a></button>
+        <button class="morr"><a class="loss" href="contact us.html">QUESTION9</a></button>
+        <button class="morr"><a class="loss" href="index.html">QUESTION10</a></button>
+        <button class="morr"><a class="loss" href="vols.html">QUESTION11</a></button>
+        <button class="morr"><a class="loss" href="note.html">QUESTION12</a></button>
+        <button class="morr"><a class="loss" href="feedback.html">QUESTION13</a></button>
+     </div>
+    <h1>Color Array Manipulation</h1>
+    <div class="output">
+        <h2>Original Array</h2>
+        <p id="original-array"></p>
+    </div>
+
+    <script>
+        // Initialize the array with color names
+        var colors = ["Red", "Green", "Blue"];
+
+        // Display the original array
+        document.getElementById("original-array").textContent = "Original Colors: " + colors.join(", ");
+
+        // a. Add color to the beginning of the array
+        var colorToAddAtStart = prompt("Enter a color to add to the beginning:");
+        colors.unshift(colorToAddAtStart);
+
+        // Display the updated array after adding color at the beginning
+        document.getElementById("original-array").textContent += "\nAfter adding color at the beginning: " + colors.join(", ");
+
+        // b. Add color to the end of the array
+        var colorToAddAtEnd = prompt("Enter a color to add to the end:");
+        colors.push(colorToAddAtEnd);
+
+        // Display the updated array after adding color at the end
+        document.getElementById("original-array").textContent += "\nAfter adding color at the end: " + colors.join(", ");
+
+        // c. Add two more colors to the beginning of the array
+        colors.unshift("Yellow", "Orange");
+
+        // Display the updated array after adding two colors at the beginning
+        document.getElementById("original-array").textContent += "\nAfter adding two colors at the beginning: " + colors.join(", ");
+
+        // d. Delete the first color in the array
+        colors.shift();
+
+        // Display the updated array after deleting the first color
+        document.getElementById("original-array").textContent += "\nAfter deleting the first color: " + colors.join(", ");
+
+        // e. Delete the last color in the array
+        colors.pop();
+
+        // Display the updated array after deleting the last color
+        document.getElementById("original-array").textContent += "\nAfter deleting the last color: " + colors.join(", ");
+
+        // f. Add color at desired index
+        var indexToAddColor = prompt("Enter the index at which you want to add a color:");
+        var colorToAddAtIndex = prompt("Enter the color you want to add at index " + indexToAddColor + ":");
+        colors.splice(indexToAddColor, 0, colorToAddAtIndex);
+
+        // Display the updated array after adding color at desired index
+        document.getElementById("original-array").textContent += "\nAfter adding color at index " + indexToAddColor + ": " + colors.join(", ");
+
+        // g. Delete colors at desired index
+        var indexToDeleteColor = prompt("Enter the index from which you want to delete color(s):");
+        var numberOfColorsToDelete = prompt("Enter the number of colors you want to delete from index " + indexToDeleteColor + ":");
+        colors.splice(indexToDeleteColor, numberOfColorsToDelete);
+
+        // Display the updated array after deleting colors at desired index
+        document.getElementById("original-array").textContent += "\nAfter deleting " + numberOfColorsToDelete + " color(s) from index " + indexToDeleteColor + ": " + colors.join(", ");
+    </script>
+</body>
+</html>

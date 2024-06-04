@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Array Elements</title>
+    <style>
+        *{
+            text-align: center;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #output {
+            margin-top: 20px;
+        }
+        .loss{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-weight: bold;
+            text-decoration: none;
+            color: orange;
+            height: 200px;
+            width: 200px;
+        }
+        .morr:hover {
+            background-color: olive;
+            border-color:black;
+            
+            
+        }
+        button{
+            height: 40px;
+            width: 200px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="fill">
+        <button class="morr"><a class="loss" href="home.html">QUESTION 8</a></button>
+        <button class="morr"><a class="loss" href="contact us.html">QUESTION9</a></button>
+        <button class="morr"><a class="loss" href="index.html">QUESTION10</a></button>
+        <button class="morr"><a class="loss" href="vols.html">QUESTION11</a></button>
+        <button class="morr"><a class="loss" href="note.html">QUESTION12</a></button>
+        <button class="morr"><a class="loss" href="feedback.html">QUESTION13</a></button>
+     </div>
+    <h1>Join Array Elements</h1>
+
+    <div id="output">
+        <h2>Original Array:</h2>
+        <p id="original-array"></p>
+        <h2>Single String:</h2>
+        <p id="single-string"></p>
+    </div>
+
+    <script>
+        // Given array
+        var arr = ["This ", " is ", " my ", " cat"];
+
+        // Create a single string from the array using join method
+        var singleString = arr.join('');
+
+        // Display the original array
+        document.getElementById("original-array").textContent = "Original Array: " + arr.join(', ');
+
+        // Display the single string
+        document.getElementById("single-string").textContent = "Single String: " + singleString;
+    </script>
+</body>
+</html>

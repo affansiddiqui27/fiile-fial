@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sort Student Scores</title>
+    <style>
+        *{
+            text-align: center;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #output {
+            margin-top: 20px;
+        }
+        .loss{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-weight: bold;
+            text-decoration: none;
+            color: orange;
+            height: 200px;
+            width: 200px;
+        }
+        .morr:hover {
+            background-color: olive;
+            border-color:black;
+            
+            
+        }
+        button{
+            height: 40px;
+            width: 200px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="fill">
+        <button class="morr"><a class="loss" href="home.html">QUESTION 8</a></button>
+        <button class="morr"><a class="loss" href="contact us.html">QUESTION9</a></button>
+        <button class="morr"><a class="loss" href="index.html">QUESTION10</a></button>
+        <button class="morr"><a class="loss" href="vols.html">QUESTION11</a></button>
+        <button class="morr"><a class="loss" href="note.html">QUESTION12</a></button>
+        <button class="morr"><a class="loss" href="feedback.html">QUESTION13</a></button>
+     </div>
+    <h1>Sort Student Scores</h1>
+
+    <div id="output">
+        <h2>Original Student Scores:</h2>
+        <p id="original-scores"></p>
+        <h2>Sorted Student Scores:</h2>
+        <p id="sorted-scores"></p>
+    </div>
+
+    <script>
+        // Array to store student scores
+        var studentScores = [78, 92, 64, 85, 91, 76];
+
+        // Function to sort the array in ascending order
+        studentScores.sort(function(a, b) {
+            return a - b;
+        });
+
+        // Display the original student scores
+        document.getElementById("original-scores").textContent = "Original Scores: " + studentScores.join(", ");
+
+        // Display the sorted student scores
+        document.getElementById("sorted-scores").textContent = "Sorted Scores: " + studentScores.join(", ");
+    </script>
+</body>
+</html>
